@@ -580,66 +580,10 @@
                 </TableRow>
 
 
-                <TableRow android:id="@+id/trEntry1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <CheckBox android:id="@+id/cbManualEntry"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="ManualEntry"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:checked="true"/>
 
-                    <CheckBox android:id="@+id/cbContactEntry"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="ContactEntry"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:checked="true"/>
 
-                </TableRow>
 
-                <TableRow android:id="@+id/trEntry2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <CheckBox android:id="@+id/cbSwipeEntry"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="SwipeEntry"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:checked="true"/>
-
-                    <CheckBox android:id="@+id/cbFallbackEntry"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="FallbackEntry"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:checked="true"/>
-
-                </TableRow>
-
-                <TableRow android:id="@+id/trEntry3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <CheckBox android:id="@+id/cbContactlessEntry"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="ContactlessEntry"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:checked="true"/>
-
-                </TableRow>
 
 
 

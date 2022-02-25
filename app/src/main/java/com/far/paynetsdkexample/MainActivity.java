@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements IDeviceListener {
     Spinner spnTransactionType;
     ViewGroup configLayout, transactionLayout, responseLayout;
     EditText etCurrency,etServiceKey,etTerminalCode,etMerchantCode,  etTransactionId, etInvoice, etAmount, etCashbackAmount, etStateTax,etCityTax,etReducedStateTax, etTipAmount,etKeySlot, etMinPinLength, etMaxPinLength,etTimeout,etExternalData, etCardNumber, etVoucherNumber, etAuthNumber, etTransactionIdResponse;
-    CheckBox cbManualEntry, cbContactEntry, cbSwipeEntry, cbFallbackEntry, cbContactlessEntry;
     Button btnBack, btnNext;
     TextView tvResponse;
 
@@ -92,12 +91,6 @@ public class MainActivity extends AppCompatActivity implements IDeviceListener {
         etCardNumber = findViewById(R.id.etCardNumber);
         etVoucherNumber = findViewById(R.id.etVoucherNumber);
         etAuthNumber = findViewById(R.id.etAuthNumber);
-
-        cbManualEntry = findViewById(R.id.cbManualEntry);
-        cbContactEntry= findViewById(R.id.cbContactEntry);
-        cbSwipeEntry= findViewById(R.id.cbSwipeEntry);
-        cbFallbackEntry= findViewById(R.id.cbFallbackEntry);
-        cbContactlessEntry= findViewById(R.id.cbContactlessEntry);
 
         btnNext = findViewById(R.id.btnNext);
         btnBack = findViewById(R.id.btnBack);
@@ -235,30 +228,12 @@ public class MainActivity extends AppCompatActivity implements IDeviceListener {
         findViewById(R.id.trAuthNumber).setVisibility(isEBTVoucher()?View.VISIBLE:View.GONE);
 
 
-        findViewById(R.id.trEntry1).setVisibility(hasEntryMode()? View.VISIBLE:View.GONE);
-        findViewById(R.id.trEntry2).setVisibility(hasEntryMode()? View.VISIBLE:View.GONE);
-        findViewById(R.id.trEntry3).setVisibility(hasEntryMode()? View.VISIBLE:View.GONE);
 
         if (isEBTTransaction()){
             etServiceKey.setText("EBT-01");
-            cbContactEntry.setChecked(false);
-            cbContactlessEntry.setChecked(false);
-            cbFallbackEntry.setChecked(false);
-            cbManualEntry.setChecked(false);
-            cbSwipeEntry.setChecked(true);
 
-            cbContactEntry.setEnabled(false);
-            cbContactlessEntry.setEnabled(false);
-            cbFallbackEntry.setEnabled(false);
-            cbManualEntry.setEnabled(false);
-            cbSwipeEntry.setEnabled(true);
         }else{
             etServiceKey.setText("TEST-001");
-            cbContactEntry.setEnabled(true);
-            cbContactlessEntry.setEnabled(true);
-            cbFallbackEntry.setEnabled(true);
-            cbManualEntry.setEnabled(true);
-            cbSwipeEntry.setEnabled(true);
         }
 
 
@@ -411,9 +386,6 @@ public class MainActivity extends AppCompatActivity implements IDeviceListener {
         }else if(hasAmount() && getAmount() <= 0){
             Snackbar.make(transactionLayout,"Amount must be greater than 0", BaseTransientBottomBar.LENGTH_LONG).show();
             etAmount.requestFocus();
-            return false;
-        } else if(hasEntryMode() && (!cbManualEntry.isChecked() && !cbContactEntry.isChecked() && !cbContactlessEntry.isChecked() && !cbFallbackEntry.isChecked() && !cbSwipeEntry.isChecked())){
-            Snackbar.make(configLayout,"Select at leat 1 entry mode", BaseTransientBottomBar.LENGTH_LONG).show();
             return false;
         }
         return true;
