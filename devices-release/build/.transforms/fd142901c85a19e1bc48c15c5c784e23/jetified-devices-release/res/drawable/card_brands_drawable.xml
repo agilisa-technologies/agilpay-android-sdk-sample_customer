@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/card_brands"
+        android:left="10dp"
+        android:right="10dp"
+        android:width="100dp"
+        android:height="20dp">
+    </item>
+
+</layer-list>

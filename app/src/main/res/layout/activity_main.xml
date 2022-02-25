@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout android:id="@+id/configLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Currency"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:text="840"/>
+
+                </TableRow>
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="TerminalCode"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etTerminalCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="MOVIL-001"/>
+
+                </TableRow>
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="MerchantCode"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etMerchantCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="MOVIL-001"/>
+
+                </TableRow>
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="WALLET"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ClientId"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etClientId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="MOVIL-001"/>
+
+                </TableRow>
+
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ClientSecret"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etClientSecret"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="Dynapay"/>
+
+                </TableRow>
+
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="CustomerId"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etCustomerId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="12312345"/>
+
+                </TableRow>
+
+
+
+
+
+
+            </TableLayout>
+
+
+
+            <TableLayout android:id="@+id/transactionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TableRow android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Spinner android:id="@+id/spnTransactionType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trTransactionId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="TransactionId"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etTransactionId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trServiceKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ServiceKey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etServiceKey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Invoice"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etInvoice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Amount"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trCashback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="CashbackAmount"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etCashbackAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trStateTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="StateTax"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etStateTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trCityTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="CityTax"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etCityTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trReducedStateTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ReducedStateTax"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etReducedStateTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+
+
+                <TableRow android:id="@+id/trTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="TipAmount"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etTipAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trKeySlot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="KeySlot"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etKeySlot"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:hint="Min 1 Max 99"
+                        android:text="1"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trMinPinLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="MinPinLength"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etMinPinLength"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:hint="Min 4 Max 12"
+                        android:text="4"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trMaxPinLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="MaxPinLength"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etMaxPinLength"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:hint="Min 4 Max 12"
+                        android:text="6"/>
+
+                </TableRow>
+
+
+
+
+                <TableRow android:id="@+id/trCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="CardNumber"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etCardNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trVoucherNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="VoucherNumber"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etVoucherNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:text="123456"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trAuthNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="AuthNumber"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etAuthNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:text="654321"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trTimeout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Timeout"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etTimeout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:hint="in seconds Min 20"
+                        android:text="30"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trExternalData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ExternalData"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etExternalData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"/>
+
+                </TableRow>
+
+
+                <TableRow android:id="@+id/trEntry1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox android:id="@+id/cbManualEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ManualEntry"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:checked="true"/>
+
+                    <CheckBox android:id="@+id/cbContactEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ContactEntry"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:checked="true"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trEntry2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox android:id="@+id/cbSwipeEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="SwipeEntry"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:checked="true"/>
+
+                    <CheckBox android:id="@+id/cbFallbackEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="FallbackEntry"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:checked="true"/>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/trEntry3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox android:id="@+id/cbContactlessEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="ContactlessEntry"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:checked="true"/>
+
+                </TableRow>
+
+
+
+
+
+            </TableLayout>
+
+
+
+            <TableLayout android:id="@+id/responseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="TransactionId"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <EditText android:id="@+id/etTransactionIdResponse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView android:id="@+id/tvResponse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+    <Button android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Next"/>
+    <Button android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:visibility="gone"/>
+
+
+
+
+</LinearLayout>

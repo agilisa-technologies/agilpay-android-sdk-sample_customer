@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Gray2">#e1e1e1</color>
+    <color name="black">#090000</color>
+    <color name="blackTransparent">#39090000</color>
+    <color name="color_accent">#EF682E</color>
+    <color name="color_primary">#154FB0</color>
+    <color name="color_primary_dark">#303F9F</color>
+    <color name="dark_blue_visa">#2060A7</color>
+    <color name="dark_gray_amex">#878E92</color>
+    <color name="dark_gray_discover">#73777F</color>
+    <color name="dark_gray_mastercard">#2C2829</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="green_800">#2E7D32</color>
+    <color name="lightGray">#BDBDBD</color>
+    <color name="light_blue_visa">#2AA8D1</color>
+    <color name="light_gray">#C4C9CC</color>
+    <color name="light_gray_amex">#C4C9CC</color>
+    <color name="light_gray_discover">#8A8D95</color>
+    <color name="light_gray_mastercard">#464344</color>
+    <color name="orange_agilisa">#EF682E</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add_to_wallet">Add to wallet</string>
+    <string name="alert">Alert</string>
+    <string name="an_error_occurred">An error has occurred</string>
+    <string name="approved">Approved</string>
+    <string name="authorization">Authorization</string>
+    <string name="back">Back</string>
+    <string name="bad_request">The request could not be made</string>
+    <string name="batch_cant_be_closed">batch cannot be closed</string>
+    <string name="batch_closed_successfully">Batch closed successfully</string>
+    <string name="card_number">CARD NUMBER</string>
+    <string name="card_present">Card present</string>
+    <string name="clear">Clear</string>
+    <string name="close">Close</string>
+    <string name="confirm">Confirm</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="field_cannot_be_empty">This field cannot be empty</string>
+    <string name="field_must_be_characters_long">the field must be %1$d characters long</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_desc"> </string>
+    <string name="inactive_terminal">The Terminal is Inactive</string>
+    <string name="incorrect_pin">Wrong PIN. Try again</string>
+    <string name="input_card">Input Card</string>
+    <string name="insert_card">Insert card</string>
+    <string name="invalid_data_value">invalid %1$s value</string>
+    <string name="invalid_merchant">The Merchant is Inactive,  please verify the credentials and  try again</string>
+    <string name="invalid_password_or_user">Invalid Username or Password</string>
+    <string name="invalid_token">The Token is Invalid.</string>
+    <string name="invalid_value">invalid value</string>
+    <string name="manual_account">Manual account</string>
+    <string name="manual_entry">Manual entry</string>
+    <string name="message">Message</string>
+    <string name="month">month</string>
+    <string name="name_on_card">NAME ON CARD</string>
+    <string name="no_edctype_found">No EDCType found</string>
+    <string name="no_internet">There is no internet. Check the device connection.</string>
+    <string name="no_sale_found">No sale was found</string>
+    <string name="no_transactions_to_close">there are no pending transactions to close</string>
+    <string name="no_transtype_found">No TransType found</string>
+    <string name="not_implemented">not implemented</string>
+    <string name="offline_transaction_approved">Transaction approved OFFLINE</string>
+    <string name="offline_transaction_decline">Transaction declined OFFLINE</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="pay_using">Pay %1$s using:</string>
+    <string name="permission_camera_rationale">Permission needed to read QR code</string>
+    <string name="pin_limit_exceeded">The maximum limit of PIN attempts has been exceeded. Try another payment method</string>
+    <string name="please_input_account">Please input account</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="proceed">Proceed</string>
+    <string name="processing">processing ...</string>
+    <string name="retry">Retry</string>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="sign_here">Sign here</string>
+    <string name="status">Status</string>
+    <string name="successful">Successful</string>
+    <string name="successfully_request_token">The merchant fiscal configuration \nwas successfully completed\nYour Token:</string>
+    <string name="swipe_card">Swipe card</string>
+    <string name="tap_card">Tap card</string>
+    <string name="terminal_name_not_found">Terminal Name not found, please check the information and  try again</string>
+    <string name="token_missing">The Token is Missing.</string>
+    <string name="total_amount">Total amount</string>
+    <string name="transaction_decline">Transaction declined</string>
+    <string name="try_again">try again</string>
+    <string name="try_later">please try again later</string>
+    <string name="verific_credential">please verify the credentials and</string>
+    <string name="wait_remove_card">Please Remove Card…</string>
+    <string name="wallet">Wallet</string>
+    <string name="zip_code">ZIP CODE</string>
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        
+        <item name="colorControlActivated">@color/color_primary</item>
+        
+    </style>
+    <style name="TextInputLayoutAppearanceWhite" parent="Widget.Design.TextInputLayout">
+        
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlNormal">@color/lightGray</item>
+        <item name="backgroundColor">@color/color_primary</item>
+
+        
+    </style>
+</resources>

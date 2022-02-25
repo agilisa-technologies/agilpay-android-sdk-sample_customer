@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_btn_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_primary">
+
+        <TextView android:id="@+id/tvAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:fontFamily="@font/visbyroundcf_regular"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="20dp"
+        android:layout_marginTop="80dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnPresentCard"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/color_primary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/card_present"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:paddingLeft="70dp"
+                            android:fontFamily="@font/visbyroundcf_regular"
+                            android:textColor="@color/black" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/card"
+                            android:padding="15dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnWallet"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/color_primary"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/btnPresentCard">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/wallet"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:paddingLeft="70dp"
+                            android:fontFamily="@font/visbyroundcf_regular"
+                            android:textColor="@color/black" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/wallet"
+                            android:padding="15dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnManualEntry"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/color_primary"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/btnWallet">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/manual_entry"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:paddingLeft="70dp"
+                            android:fontFamily="@font/visbyroundcf_regular"
+                            android:textColor="@color/black" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/smartphone"
+                            android:padding="15dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnScanSQ"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/color_primary"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/btnManualEntry">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp">
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/scan_qr_code"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:paddingLeft="70dp"
+                            android:fontFamily="@font/visbyroundcf_regular"
+                            android:textColor="@color/black" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/qr_code_scan"
+                            android:padding="15dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <ImageView android:id="@+id/imgQR"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+</RelativeLayout>
